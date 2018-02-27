@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zha-Sn-FRC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="OrcamEyal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nue-VV-GYW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <segue destination="kcg-Cr-swZ" kind="embed" identifier="container" id="Nvi-Bd-Yi1"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Nue-VV-GYW" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Dvo-dd-dmC"/>
+                            <constraint firstItem="Nue-VV-GYW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Wo4-Jw-Ehf"/>
+                            <constraint firstItem="Nue-VV-GYW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="cYk-L6-nN0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="Nue-VV-GYW" secondAttribute="top" id="wKA-aF-YjX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="dz0-UY-YSZ">
+                        <nil key="title"/>
+                        <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="zJO-G5-jgk">
+                            <rect key="frame" x="127" y="7.5" width="121" height="29"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                            </segments>
+                        </segmentedControl>
+                        <barButtonItem key="rightBarButtonItem" title="Show Data" style="plain" id="vLX-uA-3Zp">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="71K-YU-tc6">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Data"/>
+                                <connections>
+                                    <action selector="showDataTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xj0-nj-jES"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="containerView" destination="Nue-VV-GYW" id="gU2-Xb-xHG"/>
+                        <outlet property="segmentedControl" destination="zJO-G5-jgk" id="yv3-0i-aRP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-777" y="9"/>
+        </scene>
+        <!--Bluetooth View Controller-->
+        <scene sceneID="lSY-l7-Tse">
+            <objects>
+                <viewController storyboardIdentifier="vc2" id="PkH-9V-2lx" customClass="BluetoothViewController" customModule="OrcamEyal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o4f-7c-Fqp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ulq-ms-nuh">
+                                <rect key="frame" x="-0.5" y="10" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="bluetoothCell" id="8fO-2f-UxM" customClass="BluetoothTableViewCell" customModule="OrcamEyal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8fO-2f-UxM" id="eyp-i8-mDZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR1-fb-nA7">
+                                                    <rect key="frame" x="0.0" y="-0.5" width="375" height="44"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="dR1-fb-nA7" firstAttribute="width" secondItem="eyp-i8-mDZ" secondAttribute="width" id="0dZ-yf-5jl"/>
+                                                <constraint firstItem="dR1-fb-nA7" firstAttribute="height" secondItem="eyp-i8-mDZ" secondAttribute="height" id="JEy-uA-x08"/>
+                                                <constraint firstItem="dR1-fb-nA7" firstAttribute="centerX" secondItem="eyp-i8-mDZ" secondAttribute="centerX" id="iwJ-Iy-UX5"/>
+                                                <constraint firstItem="dR1-fb-nA7" firstAttribute="centerY" secondItem="eyp-i8-mDZ" secondAttribute="centerY" id="yFb-zc-TKn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="dR1-fb-nA7" id="f8V-2N-dxC"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ulq-ms-nuh" firstAttribute="width" secondItem="o4f-7c-Fqp" secondAttribute="width" id="3Ef-sE-ZIw"/>
+                            <constraint firstItem="ulq-ms-nuh" firstAttribute="centerX" secondItem="KWe-gM-WgM" secondAttribute="centerX" id="VEL-ZF-As4"/>
+                            <constraint firstItem="ulq-ms-nuh" firstAttribute="height" secondItem="o4f-7c-Fqp" secondAttribute="height" id="gCD-Uq-1lD"/>
+                            <constraint firstItem="ulq-ms-nuh" firstAttribute="centerY" secondItem="KWe-gM-WgM" secondAttribute="centerY" id="ojP-rV-rd0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KWe-gM-WgM"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="ulq-ms-nuh" id="6TT-VR-w02"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y3j-NP-yFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1369" y="554"/>
+        </scene>
+        <!--Dates View Controller-->
+        <scene sceneID="bFM-dn-pAs">
+            <objects>
+                <viewController storyboardIdentifier="vc1" id="5kf-hq-56J" customClass="DatesViewController" customModule="OrcamEyal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3V7-hT-p8F">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xXY-nf-GzR">
+                                <rect key="frame" x="-0.5" y="-0.5" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="datesCell" id="4EN-qC-QTO" customClass="DatesTableViewCell" customModule="OrcamEyal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4EN-qC-QTO" id="Pgg-1W-G0o">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WNo-ug-fYx">
+                                                    <rect key="frame" x="0.0" y="-1" width="375" height="44"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="WNo-ug-fYx" firstAttribute="height" secondItem="Pgg-1W-G0o" secondAttribute="height" id="3Nx-vq-xhI"/>
+                                                <constraint firstItem="WNo-ug-fYx" firstAttribute="centerY" secondItem="Pgg-1W-G0o" secondAttribute="centerY" id="Miy-o4-lcM"/>
+                                                <constraint firstItem="WNo-ug-fYx" firstAttribute="centerX" secondItem="Pgg-1W-G0o" secondAttribute="centerX" id="VaN-h3-Vu9"/>
+                                                <constraint firstItem="WNo-ug-fYx" firstAttribute="width" secondItem="Pgg-1W-G0o" secondAttribute="width" id="dTv-0X-Pup"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="WNo-ug-fYx" id="eA8-C5-YYe"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="xXY-nf-GzR" firstAttribute="centerY" secondItem="3V7-hT-p8F" secondAttribute="centerY" id="4EX-cB-e0W"/>
+                            <constraint firstItem="xXY-nf-GzR" firstAttribute="width" secondItem="3V7-hT-p8F" secondAttribute="width" id="FaB-3H-0f8"/>
+                            <constraint firstItem="xXY-nf-GzR" firstAttribute="centerX" secondItem="3V7-hT-p8F" secondAttribute="centerX" id="FvA-Hb-P4X"/>
+                            <constraint firstItem="xXY-nf-GzR" firstAttribute="height" secondItem="3V7-hT-p8F" secondAttribute="height" id="fYe-Ud-8T0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="xXY-nf-GzR" id="c6H-Eu-lLS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="28i-e7-aZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1370" y="-389"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vIG-bR-KFV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zha-Sn-FRC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="eIj-VQ-Lwt">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3mk-aT-fgJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l98-qj-AVg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1706" y="9"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="D31-5j-dhP">
+            <objects>
+                <viewController id="kcg-Cr-swZ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VB0-cv-Zdg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vk7-Wo-WZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="340" y="9"/>
+        </scene>
+    </scenes>
+</document>
