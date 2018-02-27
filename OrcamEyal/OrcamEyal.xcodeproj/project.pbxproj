@@ -12,8 +12,6 @@
 		BF74B7A820456D6500B20F58 /* OrcamEyal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BF74B7A620456D6500B20F58 /* OrcamEyal.xcdatamodeld */; };
 		BF74B7AA20456D6500B20F58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF74B7A920456D6500B20F58 /* Assets.xcassets */; };
 		BF74B7AD20456D6500B20F58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF74B7AB20456D6500B20F58 /* LaunchScreen.storyboard */; };
-		BF74B7B820456D6500B20F58 /* OrcamEyalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74B7B720456D6500B20F58 /* OrcamEyalTests.swift */; };
-		BF74B7C320456D6600B20F58 /* OrcamEyalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74B7C220456D6600B20F58 /* OrcamEyalUITests.swift */; };
 		BF74B7D420456E9E00B20F58 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74B7D320456E9E00B20F58 /* MainViewController.swift */; };
 		BF74B7D620456EA900B20F58 /* BluetoothViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74B7D520456EA900B20F58 /* BluetoothViewController.swift */; };
 		BF74B7D820456EB800B20F58 /* DatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF74B7D720456EB800B20F58 /* DatesViewController.swift */; };
@@ -53,11 +51,7 @@
 		BF74B7AC20456D6500B20F58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF74B7AE20456D6500B20F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF74B7B320456D6500B20F58 /* OrcamEyalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrcamEyalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF74B7B720456D6500B20F58 /* OrcamEyalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcamEyalTests.swift; sourceTree = "<group>"; };
-		BF74B7B920456D6500B20F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF74B7BE20456D6600B20F58 /* OrcamEyalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OrcamEyalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BF74B7C220456D6600B20F58 /* OrcamEyalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrcamEyalUITests.swift; sourceTree = "<group>"; };
-		BF74B7C420456D6600B20F58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF74B7D320456E9E00B20F58 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF74B7D520456EA900B20F58 /* BluetoothViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothViewController.swift; sourceTree = "<group>"; };
 		BF74B7D720456EB800B20F58 /* DatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatesViewController.swift; sourceTree = "<group>"; };
@@ -100,8 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				BF74B79E20456D6500B20F58 /* OrcamEyal */,
-				BF74B7B620456D6500B20F58 /* OrcamEyalTests */,
-				BF74B7C120456D6600B20F58 /* OrcamEyalUITests */,
 				BF74B79D20456D6500B20F58 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,24 +124,6 @@
 				BF74B7A620456D6500B20F58 /* OrcamEyal.xcdatamodeld */,
 			);
 			path = OrcamEyal;
-			sourceTree = "<group>";
-		};
-		BF74B7B620456D6500B20F58 /* OrcamEyalTests */ = {
-			isa = PBXGroup;
-			children = (
-				BF74B7B720456D6500B20F58 /* OrcamEyalTests.swift */,
-				BF74B7B920456D6500B20F58 /* Info.plist */,
-			);
-			path = OrcamEyalTests;
-			sourceTree = "<group>";
-		};
-		BF74B7C120456D6600B20F58 /* OrcamEyalUITests */ = {
-			isa = PBXGroup;
-			children = (
-				BF74B7C220456D6600B20F58 /* OrcamEyalUITests.swift */,
-				BF74B7C420456D6600B20F58 /* Info.plist */,
-			);
-			path = OrcamEyalUITests;
 			sourceTree = "<group>";
 		};
 		BF74B7D020456D8100B20F58 /* View Controllers */ = {
@@ -352,7 +326,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF74B7B820456D6500B20F58 /* OrcamEyalTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +333,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF74B7C320456D6600B20F58 /* OrcamEyalUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
